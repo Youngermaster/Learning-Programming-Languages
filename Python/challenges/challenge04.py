@@ -1,0 +1,5 @@
+print("============= Challenge 04 =============")
+anything = input("Enter something: ")
+print(type(anything))
+print(anything.isalpha())
+print(anything.isnumeric())

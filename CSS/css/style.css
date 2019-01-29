@@ -1,0 +1,80 @@
+/*
+* This is a comment
+
+body {
+    background: aquamarine;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color:coral;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+p {
+    color: rgb(0, 0, 0);
+}
+
+p a {
+    font-size: 20px;
+}
+
+p .green {
+    color: green;
+}
+
+a[href="Wallpapers/kali-2.png"] {
+    color:red;
+    font-size: 40px;
+}
+
+body {
+    font-size: 16px;
+}
+
+div {
+    background: #000000;
+    color: #efefef;
+    width: 50%;
+}
+
+h1 {
+    color: rgb(255, 255, 0);
+}
+
+h2 {
+    color: rgba(100, 100, 255, 0.99);
+}
+
+div {
+    
+    height: 120px;
+    width: 300px;
+    margin: 20px 50px;
+    padding: 30px;
+    background: #ff8000;
+    border: 10px solid #000000;
+    display: inline-block;
+}
+*/
+
+body {
+    background: url(../Wallpapers/saint-mary-lake-glacier-2.jpg);
+
+    /*
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-repeat: round;
+    background-position: 50px 20px;
+    background-position: center 10px;
+    */
+    
+}
+
+div {
+    background: url(../Wallpapers/kali.png);
+}
