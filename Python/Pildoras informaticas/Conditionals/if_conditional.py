@@ -1,11 +1,13 @@
 print("#" * 50)
 print("Program of grade evaluation.\n")
 
+
 def evaluation(grade):
-    valoration = "Aproved"
+    valoration = "Approved"
     if grade < 5:
         valoration = "Suspended"
     return valoration
+
 
 student = input("Enter the grade of the student: ")
 print(evaluation(12), "\n")
