@@ -3,6 +3,8 @@ countries = {"United Kingdom": "London", "Spain": "Madrid", "Italy": "Rome"}
 countries["France"] = "Berlin"  # We can add on this way
 countries["France"] = "Paris"  # We can modify on this way
 countries["India"] = "Delhi"
+countries["United Kingdom"] = 12
+
 del countries["India"]
 print(countries)
 
