@@ -19,5 +19,5 @@ print(empaquetedTuple)
 
 # unpaqueted de tuple
 name, age, month, year, day = myTuple
-print("Name: {} Age: {} Month: {} Year: {} Day: {}" \
+print("Name: {} Age: {} Month: {} Year: {} Day: {}"
       .format(name, age, month, year, day))
