@@ -1,0 +1,5 @@
+
+-- Order by section and price
+SELECT * FROM productos 
+WHERE SECCIÓN = "DEPORTES" OR SECCIÓN = "CERÁMICA" 
+    ORDER BY SECCIÓN, PAÍSDEORIGEN, PRECIO ASC;

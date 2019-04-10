@@ -1,3 +1,5 @@
+% Clase 4 de abril de 2019
+
 a = 2
 b = 6
 U = rand(10000, 1)      % Uniforme entre cero y uno.
