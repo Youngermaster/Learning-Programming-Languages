@@ -23,5 +23,14 @@ function secondFunction() {
 	// Stuff
 }
 
+function thirdFunction(name) {
+	console.log(name);
+}
+
 stuff.addEventListener("click", firstFunction);
 stuff.addEventListener("click", secondFunction);
+
+// We can also use anonimus functios inside of the Event Listener
+stuff.addEventListener("click", function(e) {
+	thirdFunction("Juan Manuel Young Hoyos");
+});
