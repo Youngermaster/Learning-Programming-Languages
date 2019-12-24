@@ -1,10 +1,10 @@
 package main
 
 import (
-  "encoding/json"
-  "log"
-  "net/http"
   "github.com/gorilla/mux"
+  "encoding/json"
+  "net/http"
+  "log"
 )
 
 type Person struct {
