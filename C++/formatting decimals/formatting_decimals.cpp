@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
     cout.setf(ios::showpoint);
     cout.precision(2);
 
-    // * This is the second way.+
+    // * This is the second way.
     cout << fixed << showpoint << setprecision(3);
 
     double input;
