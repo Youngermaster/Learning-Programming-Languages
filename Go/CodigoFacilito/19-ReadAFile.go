@@ -6,11 +6,11 @@ import (
 )
 
 func main() {
-	file_data, err := ioutil.ReadFile("assets/file.txt")
+	fileData, err := ioutil.ReadFile("assets/file.txt")
 
 	if err != nil {
 		fmt.Println("There was an error!")
 	}
 
-	fmt.Println(string(file_data))
+	fmt.Println(string(fileData))
 }

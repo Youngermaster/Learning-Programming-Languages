@@ -12,15 +12,17 @@ func main() {
 }
 
 func readFile() bool {
-	file, err := os.Open("assets/file.txt")
+	file, err := os.Open("assets/fisle.txt")
 
 	defer func() {
 		file.Close()
 		fmt.Println("Defer")
+		fmt.Println("[Error Here!]:", recover())
 	}()
 
 	if err != nil {
 		fmt.Println("There was an error")
+		panic(err)
 	}
 
 	scanner := bufio.NewScanner(file)
