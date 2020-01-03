@@ -12,8 +12,8 @@ func main() {
 		}
 	}(myChannel)
 
-	msg := <- myChannel
+	msg := <-myChannel
 	fmt.Println("Channel message:", msg)
-	msg2 := <- myChannel
+	msg2 := <-myChannel
 	fmt.Println("Channel message:", msg2)
 }

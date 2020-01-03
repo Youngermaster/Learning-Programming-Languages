@@ -2,31 +2,30 @@ package main
 
 import "fmt"
 
-type User struct {
-	name string
+type user struct {
+	name     string
 	lastName string
-	age int
+	age      int
 }
 
-func (user User) getFullName() string {
+func (user user) getFullName() string {
 	return user.name + " " + user.lastName
 }
 
-func (user User) getAge() int {
+func (user user) getAge() int {
 	return user.age
 }
 
-func (user *User) setAge(age int) {
+func (user *user) setAge(age int) {
 	user.age = age
 }
 
 func main() {
-	rollin := User{name: "Rollin", lastName: "Fadel", age: 4438 }
-	
-	
+	rollin := user{name: "Rollin", lastName: "Fadel", age: 4438}
+
 	fmt.Println(rollin)
 
 	rollin.setAge(29)
-	
+
 	fmt.Println(rollin.getFullName(), "Age is", rollin.getAge())
 }

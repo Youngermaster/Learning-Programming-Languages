@@ -1,6 +1,5 @@
 package main
 
-
 func main() {
 	// * For cycle
 	println("========= For Cycle =========")
@@ -13,7 +12,7 @@ func main() {
 	whileIndex := 0
 	for whileIndex < 5 {
 		println("Index: ", whileIndex)
-		whileIndex++;
+		whileIndex++
 	}
 	// * Weird For cycle
 	println("========= Weird For cycle =========")
@@ -25,7 +24,7 @@ func main() {
 		}
 
 		println("Index: ", weirdForIndex)
-		weirdForIndex++;
+		weirdForIndex++
 
 		if weirdForIndex > 5 {
 			break

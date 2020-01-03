@@ -10,7 +10,6 @@ func main() {
 
 	copy(sliceCopyCorret, slice)
 	copy(sliceCopyEmpty, slice)
-
 	fmt.Println("Slice:", slice)
 	fmt.Println("Slice Copy Empty:", sliceCopyEmpty)
 	fmt.Println("Slice copied correct:", sliceCopyCorret)

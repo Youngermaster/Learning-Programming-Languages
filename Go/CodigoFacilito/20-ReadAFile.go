@@ -1,9 +1,9 @@
 package main
 
 import (
-	"os"
-	"fmt"
 	"bufio"
+	"fmt"
+	"os"
 )
 
 func main() {
@@ -18,7 +18,7 @@ func main() {
 	lineIndex := 0
 	for scanner.Scan() {
 		fmt.Println("Line", lineIndex, ":", scanner.Text())
-		lineIndex++;
+		lineIndex++
 	}
 
 	file.Close()

@@ -1,6 +1,7 @@
 package lib
 
 var message string
+
 // PublicAttribute * This is some documentation
 var PublicAttribute string
 
@@ -20,5 +21,5 @@ func getHello() string {
 // GetHello return a message
 // * Some little documentation
 func GetHello() string {
-	return "Hello Public" + "\n"+ message
+	return "Hello Public" + "\n" + message
 }

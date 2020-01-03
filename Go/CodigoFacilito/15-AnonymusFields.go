@@ -3,34 +3,32 @@ package main
 import "fmt"
 
 func main() {
-	newTeacher := Teacher{Human{"Shanny"}, Dummy{"Theodore"}}
-	// fmt.Println(newTeacher.name) // ! ambiguous selector newTeacher.name
-	fmt.Println(newTeacher.Human.name)
-	fmt.Println(newTeacher.Dummy.name)
-	
-	fmt.Println(newTeacher.speak())
-	fmt.Println(newTeacher.Human.speak())
+	newteacher := teacher{human{"Shanny"}, dummy{"Theodore"}}
+	// fmt.Println(newteacher.name) // ! ambiguous selector newteacher.name
+	fmt.Println(newteacher.human.name)
+	fmt.Println(newteacher.dummy.name)
+
+	fmt.Println(newteacher.speak())
+	fmt.Println(newteacher.human.speak())
 }
 
-type Human struct {
+type human struct {
 	name string
 }
 
-func (human Human) speak() string {
+func (human human) speak() string {
 	return "Bla bla bla"
 }
 
-type Dummy struct {
+type dummy struct {
 	name string
 }
 
-type Teacher struct {
-	Human
-	Dummy
+type teacher struct {
+	human
+	dummy
 }
 
-func (teacher Teacher) speak() string {
+func (teacher teacher) speak() string {
 	return "I'am a teacher"
 }
-
-

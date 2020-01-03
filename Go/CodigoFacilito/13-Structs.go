@@ -2,17 +2,17 @@ package main
 
 import "fmt"
 
-type User struct {
-	name string
+type user struct {
+	name     string
 	lastName string
-	age int
+	age      int
 }
 
 func main() {
-	rollin := User{name: "Rollin", lastName: "Fadel", age: 98705 }
-	uriel := User{"Uriel", "Hernández", 20}
-	christy := new(User) // * Get the memory address.
-	*christy = User{name: "Christy", lastName: "Dare"}
+	rollin := user{name: "Rollin", lastName: "Fadel", age: 98705}
+	uriel := user{"Uriel", "Hernández", 20}
+	christy := new(user) // * Get the memory address.
+	*christy = user{name: "Christy", lastName: "Dare"}
 	(*christy).age = 19
 
 	fmt.Println(rollin)

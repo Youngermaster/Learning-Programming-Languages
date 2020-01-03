@@ -1,8 +1,8 @@
 package main
 
 import (
-	"net/http"
 	"io"
+	"net/http"
 )
 
 func main() {
@@ -23,7 +23,7 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 func loginHandler(w http.ResponseWriter, r *http.Request) {
 	// * This is another way to serve files
 	// string := "public/"
-	http.ServeFile(w, r, "public/" + r.URL.Path[1:] + ".html")
+	http.ServeFile(w, r, "public/"+r.URL.Path[1:]+".html")
 	println(r.URL.Path[1:])
 	println("/login Path requested.")
 }

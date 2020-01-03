@@ -2,36 +2,36 @@ package main
 
 import "fmt"
 
-type User interface {
+type user interface {
 	Permissions() int
 	Name() string
 }
 
-type Admin struct {
+type admin struct {
 	name string
 }
 
-func (admin Admin) Permissions() int {
+func (admin admin) Permissions() int {
 	return 5
 }
 
-func (admin Admin) Name() string {
+func (admin admin) Name() string {
 	return admin.name
 }
 
-type Editor struct {
+type editor struct {
 	name string
 }
 
-func (editor Editor) Permissions() int {
+func (editor editor) Permissions() int {
 	return 3
 }
 
-func (editor Editor) Name() string {
+func (editor editor) Name() string {
 	return editor.name
 }
 
-func auth(user User) string {
+func auth(user user) string {
 	permissionLevel := user.Permissions()
 	if permissionLevel > 4 {
 		return "The user has access."
@@ -42,8 +42,8 @@ func auth(user User) string {
 }
 
 func main() {
-	users := []User{Admin{"Lizeth"}, Editor{"Kasandra"}}
+	users := []user{admin{"Lizeth"}, editor{"Kasandra"}}
 	for _, user := range users {
-		fmt.Println(user.Name(), "->", auth(user))	
+		fmt.Println(user.Name(), "->", auth(user))
 	}
 }

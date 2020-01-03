@@ -14,7 +14,7 @@ func main() {
 	fmt.Scanln(&wait)
 }
 
-func printStringSlowly(s string)  {
+func printStringSlowly(s string) {
 	chain := strings.Split(s, "")
 	for _, char := range chain {
 		time.Sleep(1000 * time.Millisecond)

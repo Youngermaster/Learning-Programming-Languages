@@ -34,7 +34,7 @@ func readFile() bool {
 	if true {
 		return true
 	}
-	
+
 	fmt.Println("I never execute")
 	return true
 }
