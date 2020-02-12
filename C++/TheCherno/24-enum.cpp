@@ -4,11 +4,16 @@
 // * Enums store a 4 bytes integers
 // * In this case, if we left the code like that
 // * the values will be start from zero
-enum Level {
-    zero, one, two, three
+enum Level
+{
+    zero,
+    one,
+    two,
+    three
 };
 
-enum Abc : unsigned char {
+enum Abc : unsigned char
+{
     A = 'A',
     B = 'B',
     C = 'C'

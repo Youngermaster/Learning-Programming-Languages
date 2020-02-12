@@ -5,6 +5,7 @@ static int s_variable = 12;
 // ! we gonna get a linking ERROR.
 int noStaticVariable = 10;
 
-static void function() {
+static void function()
+{
     // Stuff
 }
