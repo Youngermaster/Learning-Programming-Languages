@@ -10,7 +10,7 @@ fn main() {
         if n > 10 {
             break;
         }
-        
+
         println!("The value of n is {}", n);
     }
 }

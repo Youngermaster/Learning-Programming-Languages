@@ -11,6 +11,9 @@ fn main() {
     }
 
     for (index, animal) in animals.iter().enumerate() {
-        println!("The animal index is {} and the animal name is {}", index, animal);
+        println!(
+            "The animal index is {} and the animal name is {}",
+            index, animal
+        );
     }
 }
