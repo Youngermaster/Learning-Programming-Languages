@@ -3,8 +3,8 @@ let stuff = "some properties as document.querySelector('Stuff')"
 // With the e in any function this will prevent some defaults 
 // behaviours
 function anotherFuncion(e) {
-    e.preventDefault();
-    // Stuff
+	e.preventDefault();
+	// Stuff
 }
 
 // How I can call they?
@@ -31,6 +31,6 @@ stuff.addEventListener("click", firstFunction);
 stuff.addEventListener("click", secondFunction);
 
 // We can also use anonimus functios inside of the Event Listener
-stuff.addEventListener("click", function(e) {
+stuff.addEventListener("click", function (e) {
 	thirdFunction("Juan Manuel Young Hoyos");
 });

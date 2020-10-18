@@ -9,20 +9,23 @@
 *
 */
 
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
-int main(){
-	
+int main()
+{
+
 	int edad
-	
-	cout<<"Septimo problema de condicionales con ATS"<<endl;
-	cout<<"Este programa tiene la funcion de recibir una edad\ny decir si esta en el rango de 18 a 25."<<endl;
-	
-	cout<<"\nDigite su edad por favor."; cin>>edad;
-	
-	edad >= 18 && edad <= 25? cout<<"\n\tSu edad esta en el rango" : cout<<"\ntSu edad no esta en el rango";	
-	
+
+			cout
+		<< "Septimo problema de condicionales con ATS" << endl;
+	cout << "Este programa tiene la funcion de recibir una edad\ny decir si esta en el rango de 18 a 25." << endl;
+
+	cout << "\nDigite su edad por favor.";
+	cin >> edad;
+
+	edad >= 18 && edad <= 25 ? cout << "\n\tSu edad esta en el rango" : cout << "\ntSu edad no esta en el rango";
+
 	return 0;
 }

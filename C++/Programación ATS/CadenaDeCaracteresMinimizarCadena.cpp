@@ -9,22 +9,25 @@
 *
 */
 
-#include<iostream>
-#include<stdlib.h>
-#include<string.h>
+#include <iostream>
+#include <stdlib.h>
+#include <string.h>
 
-using  namespace std;
+using namespace std;
 
-int main(){
-	
+int main()
+{
+
 	char nombre[] = "Juan Manuel Young Hoyos";
-	
-	cout<<"Nombre sin Minuscula: "<<nombre<<endl<<endl;
-	
+
+	cout << "Nombre sin Minuscula: " << nombre << endl
+		 << endl;
+
 	strlwr(nombre);
-	
-	cout<<"Nombre con minuscula: "<<nombre<<endl<<endl;
-	
+
+	cout << "Nombre con minuscula: " << nombre << endl
+		 << endl;
+
 	system("pause");
 	return 0;
 }

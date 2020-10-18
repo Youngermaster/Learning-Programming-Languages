@@ -18,7 +18,7 @@ int main(int argc, char const *argv[])
     // Example 3
     length = strlen(stringOne);
     printf("-> Example 3\nLenght of String one: %d.\n", length);
-    
+
     // Example 4
     strcpy(stringTwo, stringOne);
     printf("-> Example 4\nString Two: %s.\n", stringTwo);

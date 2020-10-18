@@ -10,7 +10,7 @@ document.write("<h1>Hello world</h1>");
 
 // Number
 1000000
--2.3
+    - 2.3
 
 // Boolean
 true
@@ -21,17 +21,17 @@ false
 
 // Object
 {
-    "usermane":   'Juan',
-    "score":  70.4,
-    "hours":  14,
-    "profesional": true,
-    "friends": ['', '', '']
+    "usermane": 'Juan',
+        "score": 70.4,
+            "hours": 14,
+                "profesional": true,
+                    "friends": ['', '', '']
 }
 
 {
-    "usermane":   'Ryan',
-    "score":  2,
-    "hours":  1,
-    "profesional": false,
-    "friends": ['', '', '']
+    "usermane": 'Ryan',
+        "score": 2,
+            "hours": 1,
+                "profesional": false,
+                    "friends": ['', '', '']
 }

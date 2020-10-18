@@ -9,11 +9,10 @@ typedef struct Element
     float weight;
 } ELEMENT;
 
-
-int main(int argc, char const *argv[]) {
-
+int main(int argc, char const *argv[])
+{
     INT32 i;
-    MYCHAR fullName [25] = "Juan Manuel Young Hoyos";
+    MYCHAR fullName[25] = "Juan Manuel Young Hoyos";
 
     printf("-> INT32: %d.\n", i);
     printf("-> MYCHAR: %s.\n\n", fullName);

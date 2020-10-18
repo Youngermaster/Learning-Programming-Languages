@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main(int argc, char const *argv[]) {
+int main(int argc, char const *argv[])
+{
     char message[12] = "Hello world";
 
     printf("The message is: %s\n", message);

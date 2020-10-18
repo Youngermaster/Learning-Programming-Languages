@@ -9,19 +9,22 @@
 *
 */
 
-#include<iostream>
-#include<conio.h>
+#include <iostream>
+#include <conio.h>
 
 using namespace std;
 
-int main(){
-	
-	cout<<"For"<<endl<<endl;
-	
-	for(int i = 0 ; i <= 10; i ++){
-		cout<<i + (i + 1)<<endl;
+int main()
+{
+
+	cout << "For" << endl
+		 << endl;
+
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << i + (i + 1) << endl;
 	}
-	
+
 	getch(); // Lo mismo que el getch.
 	return 0;
 }

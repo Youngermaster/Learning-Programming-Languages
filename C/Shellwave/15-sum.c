@@ -1,1 +1,1 @@
-int sumTwoIntegers(int a, int b){ return a + b; }
+int sumTwoIntegers(int a, int b) { return a + b; }

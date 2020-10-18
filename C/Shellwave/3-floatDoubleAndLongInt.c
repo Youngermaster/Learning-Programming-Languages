@@ -1,6 +1,7 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[])
+{
     char y = 'y';
     int k = 24;
     float myFloat;
@@ -13,6 +14,6 @@ int main(int argc, char* argv[]) {
     printf("Size of float: %lo\n", sizeof(myFloat));
     printf("Size of double: %lo\n", sizeof(myDouble));
     printf("Size of long int: %lo\n", sizeof(myLongInt));
-    
+
     return 0;
 }

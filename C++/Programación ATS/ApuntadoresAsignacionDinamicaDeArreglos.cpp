@@ -18,8 +18,8 @@
 *
 */
 
-#include<iostream>
-#include<stdlib.h> // Funciona new y delete.
+#include <iostream>
+#include <stdlib.h> // Funciona new y delete.
 using namespace std;
 
 // Prototipo de la funcion.
@@ -28,36 +28,41 @@ void MostrarNotas();
 
 int numCalif, *calif;
 
-int main(){
-	
+int main()
+{
+
 	PedirNotas();
 	MostrarNotas();
-	
+
 	delete[] calif; // Liberando el espacio de bytes utilizados anteriormente.
-	
+
 	system("pause");
 	return 0;
 }
 
-void PedirNotas(){
-	cout<<"Digite el numero de calificaciones: ";
-	cin>>numCalif;
-	cout<<endl;
-	
+void PedirNotas()
+{
+	cout << "Digite el numero de calificaciones: ";
+	cin >> numCalif;
+	cout << endl;
+
 	calif = new int[numCalif]; // Crea el arreglo.
-	
-	for(int y = 0 ; y < numCalif ; y++){
-		cout<<"Digita la nota: ";
-		cin>>calif[y];
-		cout<<endl;
+
+	for (int y = 0; y < numCalif; y++)
+	{
+		cout << "Digita la nota: ";
+		cin >> calif[y];
+		cout << endl;
 	}
 }
 
-void MostrarNotas(){
-	
-	cout<<"\nMostrando notas del usuario.\n"<<endl;
-	for(int y = 0 ; y < numCalif ; y++){
-		cout<<"Nota "<<y + 1<<": "<<calif[y]<<endl;
+void MostrarNotas()
+{
+
+	cout << "\nMostrando notas del usuario.\n"
+		 << endl;
+	for (int y = 0; y < numCalif; y++)
+	{
+		cout << "Nota " << y + 1 << ": " << calif[y] << endl;
 	}
-	
 }

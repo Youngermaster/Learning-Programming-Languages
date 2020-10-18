@@ -6,9 +6,8 @@ struct Person
     int age;
 } juan, elYounger;
 
-
-int main(int argc, char const *argv[]) {
-
+int main(int argc, char const *argv[])
+{
     juan.age = 18;
     juan.gpa = 4;
 

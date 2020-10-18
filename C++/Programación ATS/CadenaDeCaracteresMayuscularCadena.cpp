@@ -9,22 +9,25 @@
 *
 */
 
-#include<iostream>
-#include<stdlib.h>
-#include<string.h>
+#include <iostream>
+#include <stdlib.h>
+#include <string.h>
 
-using  namespace std;
+using namespace std;
 
-int main(){
-	
+int main()
+{
+
 	char nombre[] = "Juan Manuel Young Hoyos";
-	
-	cout<<"Nombre sin mayusculas: "<<nombre<<endl<<endl;
-	
+
+	cout << "Nombre sin mayusculas: " << nombre << endl
+		 << endl;
+
 	strupr(nombre);
-	
-	cout<<"Nombre con Mayusculas: "<<nombre<<endl<<endl;
-	
+
+	cout << "Nombre con Mayusculas: " << nombre << endl
+		 << endl;
+
 	system("pause");
 	return 0;
 }

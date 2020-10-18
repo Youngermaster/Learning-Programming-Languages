@@ -12,11 +12,12 @@
 *	
 */
 
-#include<iostream>
-#include<stdlib.h> // Sirve para el new.
+#include <iostream>
+#include <stdlib.h> // Sirve para el new.
 using namespace std;
 
-struct Nodo{
+struct Nodo
+{
 	int dato;
 	Nodo *siguiente;
 };
@@ -24,24 +25,29 @@ struct Nodo{
 // Prototipo de la funcion.
 void agregarPila(Nodo *&, int);
 
-int main(){
+int main()
+{
 	int n1, n2;
-	Nodo *pila = NULL;	
-	cout<<"Digite un numero: "; cin>>n1;
+	Nodo *pila = NULL;
+	cout << "Digite un numero: ";
+	cin >> n1;
 	agregarPila(pila, n1);
-	
-	cout<<"Digite otro numero: "; cin>>n2;
+
+	cout << "Digite otro numero: ";
+	cin >> n2;
 	agregarPila(pila, n2);
-	
+
 	system("pause");
 	return 0;
 }
 
-void agregarPila(Nodo *&pila, int n){
+void agregarPila(Nodo *&pila, int n)
+{
 	Nodo *nuevo_nodo = new Nodo();
-	nuevo_nodo -> dato = n;
-	nuevo_nodo -> siguiente = pila;
+	nuevo_nodo->dato = n;
+	nuevo_nodo->siguiente = pila;
 	pila = nuevo_nodo;
-	
-	cout<<endl<<"Numero "<<n<<" agregado correctamente."<<endl;
+
+	cout << endl
+		 << "Numero " << n << " agregado correctamente." << endl;
 }

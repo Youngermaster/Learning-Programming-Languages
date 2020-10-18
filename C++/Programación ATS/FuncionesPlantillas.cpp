@@ -9,8 +9,8 @@
 *
 */
 
-#include<iostream>
-#include<stdlib.h>
+#include <iostream>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -18,22 +18,24 @@ using namespace std;
 template <class TIPOD>
 void showAbsolute(TIPOD number);
 
-int main(){
-	
+int main()
+{
+
 	int n1 = 41;
 	float n2 = -2312;
 	double n3 = -3134;
-	
+
 	showAbsolute(n1);
 	showAbsolute(n2);
 	showAbsolute(n3);
-	
+
 	system("pause");
 	return 0;
 }
 
 template <class TIPOD>
-void showAbsolute(TIPOD number){
+void showAbsolute(TIPOD number)
+{
 	number < 0 ? number *= -1 : number;
-	cout<<"El valor absoluto de un numero es: "<<number<<endl;
+	cout << "El valor absoluto de un numero es: " << number << endl;
 }

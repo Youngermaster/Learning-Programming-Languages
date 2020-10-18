@@ -9,22 +9,25 @@
 *
 */
 
-#include<iostream>
-#include<stdlib.h>
+#include <iostream>
+#include <stdlib.h>
 
 using namespace std;
 
-int main(){
-	
+int main()
+{
+
 	int i = 10;
-	
-	cout<<"Do While"<<endl<<endl;
-	
-	do{
-		cout<<"El numero: "<<i<<endl;
+
+	cout << "Do While" << endl
+		 << endl;
+
+	do
+	{
+		cout << "El numero: " << i << endl;
 		i--;
-	}while(i > 0);
-	
+	} while (i > 0);
+
 	system("pause"); // Lo mismo que el getch.
 	return 0;
 }

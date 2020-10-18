@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main(int argc, char const *argv[]) {
+int main(int argc, char const *argv[])
+{
     int n, *k;
 
     n = 25;

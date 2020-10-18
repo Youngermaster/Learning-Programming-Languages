@@ -1,6 +1,7 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[])
+{
     // Int
     int k = 24;
     printf("Value of k: %d\n", k);

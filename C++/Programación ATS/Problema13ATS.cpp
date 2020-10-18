@@ -9,23 +9,26 @@
 *
 */
 
-#include<iostream>
-#include<math.h>
+#include <iostream>
+#include <math.h>
 
 using namespace std;
 
-int main(){
+int main()
+{
 	float x, y, resultado;
-	
-	cout<<"\nTreceavo programa de ATS";
-	cout<<"\nVideo 10"<<endl;
-	
-	cout<<"\nDigita el valor de \"X\": "; cin>>x;
-	cout<<"\nDigita el valor de \"Y\": "; cin>>y;
-	
+
+	cout << "\nTreceavo programa de ATS";
+	cout << "\nVideo 10" << endl;
+
+	cout << "\nDigita el valor de \"X\": ";
+	cin >> x;
+	cout << "\nDigita el valor de \"Y\": ";
+	cin >> y;
+
 	resultado = (sqrt(x)) / ((pow(y, 2)) - 1);
-	
-	cout<<"\n\tEl resultado es: "<<resultado;
-	
+
+	cout << "\n\tEl resultado es: " << resultado;
+
 	return 0;
 }
