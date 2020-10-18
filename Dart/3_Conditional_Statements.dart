@@ -1,11 +1,10 @@
 void main() {
-
   // IF ELSE statement
   var salary = 800000;
 
   if (salary > 800000) {
     print("Congragulations!");
-  }  else {
+  } else {
     print("You have to work harder");
   }
 
@@ -55,10 +54,10 @@ void main() {
     case 'C':
       print("Good enough, but work hard");
       break;
-    case 'F' :
+    case 'F':
       print("You failed, try again");
       break;
-    default :
+    default:
       print("Invalid grade.");
   }
 }

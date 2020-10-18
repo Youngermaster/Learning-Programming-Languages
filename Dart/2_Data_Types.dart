@@ -1,19 +1,18 @@
-void main(){
-
+void main() {
   // Numbers: Int
   int score = 10;
-  var age = 17;   // It is inferred as integer automatically by compiler.
+  var age = 17; // It is inferred as integer automatically by compiler.
   int hexValue = 0xEADEF;
 
   // Numbers: Double
   double percentage = 55.4;
-  var percent = 99.9;   // It is inferred as double automatically by compiler.
+  var percent = 99.9; // It is inferred as double automatically by compiler.
   double exponents = 1.5e5;
 
   // Num
   int number = 17;
   double number2 = 34.0;
-  num numb;   // numb can take both variables of different types.
+  num numb; // numb can take both variables of different types.
   numb = number;
   numb = number2;
 
@@ -65,7 +64,8 @@ void main(){
 
   // Final
   final cityName = "Medellín";
-  final String countryName = "Colombia";  // It is not necessary write the data type
+  final String countryName =
+      "Colombia"; // It is not necessary write the data type
 
   // Constants
   const PI = 3.14;
@@ -99,10 +99,10 @@ void main(){
   print(list.length);
   print(list[2]);
   print(list.last);
-
 }
 
 class Circle {
   final color = "Red";
-  static const PI = 3.14; // Only static fields can be declared as constant in a class.
+  static const PI =
+      3.14; // Only static fields can be declared as constant in a class.
 }

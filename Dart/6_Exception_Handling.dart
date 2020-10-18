@@ -1,5 +1,4 @@
 void main() {
-
   onClause();
   catchClause();
   catchAndStackTraceClause();
@@ -16,7 +15,7 @@ void main() {
   // Second way
   try {
     depositMoney(-220);
-  } catch(e) {
+  } catch (e) {
     print(e.errorMessage());
   }
 }

@@ -12,7 +12,7 @@ void main() {
   print("${student1.age}");
 }
 
-class Student{
+class Student {
   int id;
   int age;
   String name;
@@ -38,5 +38,4 @@ class Student{
   study() => print("$name is now studying");
 
   sleep() => print("$name is now sleeping");
-
 }

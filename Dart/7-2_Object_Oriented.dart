@@ -1,5 +1,4 @@
 void main() {
-
   var dog = Dog();
   dog.color = "Black";
   dog.breed = "Labrador";
@@ -32,6 +31,7 @@ class Dog extends Animal {
   void bark() {
     print("Bark!");
   }
+
   // Dart method Overriding - Polymorphism
   void eat() {
     print("Dog is eating");

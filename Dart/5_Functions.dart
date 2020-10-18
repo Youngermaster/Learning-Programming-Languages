@@ -4,7 +4,7 @@ void main() {
 
   printCities("New York", "Sydney", "Cartagena");
   printCountries("USA");
-  
+
   findVolume(50, breadth: 20, height: 4);
   findVolume(50, height: 4, breadth: 20);
 
@@ -12,9 +12,10 @@ void main() {
 }
 
 // SHORT HAND SYNTAX : =>
-findRectanglePerimeter (int length, int breadth) => print("The perimeter is: ${2 * (length + breadth)}");
+findRectanglePerimeter(int length, int breadth) =>
+    print("The perimeter is: ${2 * (length + breadth)}");
 
-findRectangleArea (int length, int breadth) => length * breadth;
+findRectangleArea(int length, int breadth) => length * breadth;
 
 // REQUIRED PARAMETERS
 

@@ -1,14 +1,11 @@
-void main () {
-
+void main() {
   // For LOOP
 
-  for (int x = 0; x < 5; x++)
-    print("FOR - Hello $x");
+  for (int x = 0; x < 5; x++) print("FOR - Hello $x");
 
-    // FOR..in LOOP
+  // FOR..in LOOP
   List planetList = ["Mercury", "Venus", "Earth", "Mars"];
-  for (String planet in planetList)
-    print(planet);
+  for (String planet in planetList) print(planet);
 
   // WHILE LOOP
 
@@ -24,24 +21,24 @@ void main () {
   do {
     print("DO WHILE - Hello $z");
     z++;
-  } while(z < 5);
+  } while (z < 5);
 
   // BREAK KEYWORD
   // Using Labels
-  myOuterLoop: for (int i = 0; i < 3; i++)
+  myOuterLoop:
+  for (int i = 0; i < 3; i++)
     for (int j = 0; j < 3; j++) {
       print("$i $j");
-      if (i == 2 && j == 2)
-        break myOuterLoop;
+      if (i == 2 && j == 2) break myOuterLoop;
     }
 
   // CONTINUE KEYWORD
   // Using Labels
-print("Continue\n\n");
-  myLoop : for (int i = 0; i < 3; i++)
-      for (int j = 0; j < 3; j++){
-        if (i == j)
-          continue myLoop;
-        print("$i $j");
-      }
+  print("Continue\n\n");
+  myLoop:
+  for (int i = 0; i < 3; i++)
+    for (int j = 0; j < 3; j++) {
+      if (i == j) continue myLoop;
+      print("$i $j");
+    }
 }
