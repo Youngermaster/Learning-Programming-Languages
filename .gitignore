@@ -1,3 +1,9 @@
+# Tex outs
+Latex/*.aux
+Latex/*.log
+Latex/*.out
+Latex/*.pdf
+
 # Rust binaries
 target/
 
