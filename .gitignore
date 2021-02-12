@@ -1,15 +1,12 @@
-# Tex outs
-Latex/*.aux
-Latex/*.log
-Latex/*.out
-Latex/*.pdf
-Latex/oficialDocumentation/*.aux
-Latex/oficialDocumentation/*.log
-Latex/oficialDocumentation/*.out
-Latex/oficialDocumentation/*.pdf
-Latex/oficialDocumentation/*.bbl
-Latex/oficialDocumentation/*.blg
-Latex/oficialDocumentation/*.gz
+# Tex output files
+*.aux
+*.log
+*.o
+*.pdf
+*.bbl
+*.blg
+*.gz
+*.out
 
 # Rust binaries
 target/
