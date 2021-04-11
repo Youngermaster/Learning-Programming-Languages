@@ -2,7 +2,7 @@ use std::io::BufReader;
 use std::thread;
 use std::time::Duration;
 
-fn main() {
+pub fn basic() {
     let (_stream, stream_handle) = rodio::OutputStream::try_default().unwrap();
 
     let file = std::fs::File::open("examples/beep.wav").unwrap();
