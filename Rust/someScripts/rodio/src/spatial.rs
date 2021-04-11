@@ -2,7 +2,7 @@ use std::io::BufReader;
 use std::thread;
 use std::time::Duration;
 
-fn main() {
+pub fn music_spatial() {
     let (_stream, handle) = rodio::OutputStream::try_default().unwrap();
     let sink = rodio::SpatialSink::try_new(
         &handle,

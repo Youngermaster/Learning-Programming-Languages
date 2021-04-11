@@ -2,7 +2,7 @@ use rodio::Source;
 use std::io::BufReader;
 use std::time::Duration;
 
-fn main() {
+pub fn music_reverb() {
     let (_stream, handle) = rodio::OutputStream::try_default().unwrap();
     let sink = rodio::Sink::try_new(&handle).unwrap();
 

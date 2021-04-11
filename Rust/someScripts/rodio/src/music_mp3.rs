@@ -1,6 +1,6 @@
 use std::io::BufReader;
 
-fn main() {
+pub fn music_mp3() {
     let (_stream, handle) = rodio::OutputStream::try_default().unwrap();
     let sink = rodio::Sink::try_new(&handle).unwrap();
 
