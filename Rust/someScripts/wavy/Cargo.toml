@@ -1,0 +1,10 @@
+[package]
+name = "wavy"
+version = "0.1.0"
+authors = ["Youngermaster <juanmanuel12.13jmyh81@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+pasts = "0.7"
+wavy = "0.8"
+fon = "0.4"
