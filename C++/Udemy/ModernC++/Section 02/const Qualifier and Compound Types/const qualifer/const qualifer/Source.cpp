@@ -6,6 +6,7 @@ void Print(int *ptr) {
 void UsingConst() {
 	using namespace std;
 	float radius = 0;
+	cout << "Enter the radius: ";
 	cin >> radius;
 	const float PI = 3.14159f;
 	float area = PI * radius * radius;
