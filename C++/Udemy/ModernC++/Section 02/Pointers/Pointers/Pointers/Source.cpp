@@ -5,7 +5,7 @@ int main() {
 	int x = 10;
 	cout << &x << "\n";
 	int *ptr = nullptr;
-	//cout << *ptr << "\n";
+	cout << *ptr << "\n";
 	*ptr = 10 ;
 	return 0; 
 }
