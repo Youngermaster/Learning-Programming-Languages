@@ -3,5 +3,5 @@ fn main() {
     /**
      * Another comments
      */
-    println!("Hello world ��");
+    println!("Hello world 🦀");
 }
