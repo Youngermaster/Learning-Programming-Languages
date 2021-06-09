@@ -9,7 +9,9 @@ int main(int argc, char const *argv[])
     cout << "-------------------------------------------------" << endl;
 
     vector<int> v;
-    v.reserve(4);
+    v.reserve(3);
+    // ! If reserve the necessary memory I won't get errors
+    // v.reserve(4);
 
     cout << "Capacity of v = " << v.size() << endl;
     v.push_back(1);
