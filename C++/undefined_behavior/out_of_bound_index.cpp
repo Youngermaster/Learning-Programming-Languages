@@ -13,9 +13,10 @@ int main(int argc, char const *argv[])
     {
         cout << array[i] << " ";
     }
+
     // ! How to avoid the Undefined Behavior
     cout << endl;
-    for (auto &&i : array)
+    for (auto i : array)
     {
         cout << i << " ";
     }
