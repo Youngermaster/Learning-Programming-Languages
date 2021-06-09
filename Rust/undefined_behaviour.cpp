@@ -9,7 +9,7 @@ int main(int argc, char const *argv[])
     cout << "-------------------------------------------------" << endl;
 
     vector<int> v;
-    v.reserve(3);
+    v.reserve(4);
 
     cout << "Capacity of v = " << v.size() << endl;
     v.push_back(1);
@@ -23,7 +23,7 @@ int main(int argc, char const *argv[])
     
     int& r1 = v[1];
 
-    cout << "\n Address of V[1] = " << &v[1] << endl;
+    cout << "\nAddress of V[1] = " << &v[1] << endl;
     cout << "Address of r1 = " << &r1 << endl;
     cout << "Value of r1 = " << r1 << endl;
 
@@ -35,7 +35,7 @@ int main(int argc, char const *argv[])
         cout << i;
     }
 
-    cout << "\n Address of V[1] = " << &v[1] << endl;
+    cout << "\nAddress of V[1] = " << &v[1] << endl;
     cout << "Address of r1 = " << &r1 << endl;
     cout << "Value of r1 = " << r1 << endl;
 
