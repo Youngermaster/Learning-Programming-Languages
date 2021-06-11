@@ -7,22 +7,11 @@ class MyInt {
     int *data;
 
    public:
-    MyInt(int *p = nullptr);
-    ~MyInt();
-    int &operator*();
+    MyInt(int *p = nullptr) { data = p; };
+
+    ~MyInt() { delete data; };
+    int &operator*() { return *data; };
 };
-
-MyInt::MyInt(int *p = nullptr) {
-    data = p;
-}
-
-MyInt::~MyInt() {
-    delete data;
-}
-
-MyInt::operator*() {
-    return *data;
-}
 
 int main(int argc, char const *argv[]) {
     int *p = new int(10);
