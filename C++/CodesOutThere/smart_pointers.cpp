@@ -15,7 +15,10 @@ class MyInt {
 
 int main(int argc, char const *argv[]) {
     int *p = new int(10);
+	{
     MyInt myInt = MyInt(p);
     cout << *myInt << endl;
+	}
+	cout << *p << endl;
     return 0;
 }
