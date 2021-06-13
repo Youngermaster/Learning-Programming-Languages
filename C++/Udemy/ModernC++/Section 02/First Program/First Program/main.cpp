@@ -5,17 +5,14 @@ This is a
 multi line comment
 */
 
-#include <type_traits>
 #include <iostream>
-enum e1
-{
+#include <type_traits>
+enum e1 {
 };
-enum class e2
-{
+enum class e2 {
 };
 
-int main()
-{
+int main() {
     bool e1_type = std::is_same<
         int, typename std::underlying_type<e1>::type>::value;
 
