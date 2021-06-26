@@ -6,7 +6,8 @@ void print_intro();
 
 enum Carta {
     peeka,
-    minero
+    minero,
+    esqueletos
 };
 
 int main(int argc, char const *argv[]) {
@@ -21,10 +22,11 @@ int main(int argc, char const *argv[]) {
         case minero:
             cout << "Buena carta\n";
             break;
-
+        case esqueletos:
+            cout << "Los esqueleto son veloces\n";
+            break;
         default:
             cout << "No conozco tu carta :(\n";
-
             break;
     }
 
@@ -37,6 +39,7 @@ void print_intro() {
     cout << "| Las cartas a elegir son:                                   |" << endl;
     cout << "| Peeka (0)                                                  |" << endl;
     cout << "| Minero (1)                                                 |" << endl;
+    cout << "| Esqueleto (2)                                              |" << endl;
     cout << "|                                                            |" << endl;
     cout << "| ¿Cuál es tu carta favorita de Clash Royale?                |" << endl;
     cout << "|============================================================|" << endl;
