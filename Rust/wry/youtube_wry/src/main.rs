@@ -1,5 +1,6 @@
 fn main() -> wry::Result<()> {
     let video_url = "https://www.youtube.com/channel/UCyuYHymUH4Adj2YytTdtD4g/videos";
+    let program_name = "YouTube WRY Test";
     use wry::{
         application::{
             event::{Event, StartCause, WindowEvent},
@@ -11,7 +12,7 @@ fn main() -> wry::Result<()> {
 
     let event_loop = EventLoop::new();
     let window = WindowBuilder::new()
-        .with_title("Hello World")
+        .with_title(program_name)
         .build(&event_loop)?;
     let _webview = WebViewBuilder::new(window)?.with_url(video_url)?.build()?;
 
