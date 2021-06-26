@@ -2,7 +2,10 @@
 
 using namespace std;
 
-enum Carta {peeka = "peeka", minero = "minero"};
+enum Carta {
+    peeka = "peeka",
+    minero = "minero"
+};
 
 int main(int argc, char const *argv[]) {
     string cart;
