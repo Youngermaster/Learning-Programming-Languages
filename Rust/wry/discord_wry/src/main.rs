@@ -1,4 +1,3 @@
-#[allow(non_snake_case)]
 fn main() -> wry::Result<()> {
     use wry::{
         application::{
