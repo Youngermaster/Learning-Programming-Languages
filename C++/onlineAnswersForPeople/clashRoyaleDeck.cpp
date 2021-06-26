@@ -2,23 +2,42 @@
 
 using namespace std;
 
+void print_intro();
+
 enum Carta {
-    peeka = "peeka",
-    minero = "minero"
+    peeka,
+    minero
 };
 
 int main(int argc, char const *argv[]) {
-    string cart;
-    cout << "Cual es tu carta favorita de Clash Royale?: \n";
-    cin >> cart;
+    int id_card;
+    print_intro();
+    cin >> id_card;
 
-    if (cart == "pekka") {
-        cout << "Muy buena carta\n";
-    } else if (cart == "minero") {
-        cout << "Buena carta\n";
-    } else {
-        cout << "No conozco tu carta\n";
+    switch (id_card) {
+        case peeka:
+            cout << "Muy buena carta\n";
+            break;
+        case minero:
+            cout << "Buena carta\n";
+            break;
+
+        default:
+            cout << "No conozco tu carta :(\n";
+
+            break;
     }
 
     return 0;
+}
+
+void print_intro() {
+    cout << "|======================== Bienvenido ========================|" << endl;
+    cout << "| Para elegir las cartas digita su ID.                       |" << endl;
+    cout << "| Las cartas a elegir son:                                   |" << endl;
+    cout << "| Peeka (0)                                                  |" << endl;
+    cout << "| Minero (1)                                                 |" << endl;
+    cout << "|                                                            |" << endl;
+    cout << "| ¿Cuál es tu carta favorita de Clash Royale?                |" << endl;
+    cout << "|============================================================|" << endl;
 }
