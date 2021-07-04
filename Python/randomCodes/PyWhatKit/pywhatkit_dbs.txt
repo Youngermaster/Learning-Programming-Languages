@@ -1,0 +1,16 @@
+--------------------
+Date: 4:7:2021
+Time: 11:2
+Phone number: +573114827263
+Message: Test
+--------------------
+Date: 4:7:2021
+Time: 11:2
+Phone number: +573114827263
+Message: This is a message from Python
+--------------------
+Date: 4:7:2021
+Time: 11:6
+Phone number: +573114827263
+Message: This is a message from Python
+--------------------
