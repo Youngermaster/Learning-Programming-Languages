@@ -19,5 +19,5 @@ while True:
         except:
             print("Say something")
 
-we = gTTs(text=voice, lang='en', slow=False)
+we = gTTS(text=voice, lang='en', slow=False)
 we.save("A.wav")
