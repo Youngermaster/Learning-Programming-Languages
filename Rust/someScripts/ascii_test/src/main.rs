@@ -38,8 +38,10 @@ fn lowercase_ascii() {
     assert_eq!('❤', utf8.to_ascii_lowercase());
 }
 
+// Checks that two strings are an ASCII case-insensitive match.
+// Same as to_ascii_lowercase(a) == to_ascii_lowercase(b), but without allocating and copying temporary strings.
 #[test]
-fn some_tests() {
+fn ignore_ascii_case() {
     let ascii1 = 'A';
     let ascii2 = 'a';
     let ascii3 = 'A';
@@ -48,4 +50,24 @@ fn some_tests() {
     assert_eq!(true, ascii1.eq_ignore_ascii_case(&ascii2));
     assert_eq!(true, ascii1.eq_ignore_ascii_case(&ascii3));
     assert_eq!(false, ascii1.eq_ignore_ascii_case(&ascii4));
+}
+
+// Converts this type to its ASCII upper case equivalent in-place.
+#[test]
+fn make_ascii_uppercase() {
+    let mut ascii = 'a';
+
+    ascii.make_ascii_uppercase();
+
+    assert_eq!('A', ascii);
+}
+
+// Converts this type to its ASCII lower case equivalent in-place.
+#[test]
+fn make_ascii_lowercase() {
+    let mut ascii = 'A';
+
+    ascii.make_ascii_lowercase();
+
+    assert_eq!('a', ascii);
 }
