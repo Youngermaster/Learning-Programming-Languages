@@ -32,9 +32,11 @@ fn uppercase_ascii() {
 #[test]
 fn lowercase_ascii() {
     let ascii = 'A';
+    let ascii_2 = 'B';
     let utf8 = '❤';
 
     assert_eq!('a', ascii.to_ascii_lowercase());
+    assert_eq!('b', ascii_2.to_ascii_lowercase());
     assert_eq!('❤', utf8.to_ascii_lowercase());
 }
 
