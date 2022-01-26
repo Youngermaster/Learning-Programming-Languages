@@ -1,10 +1,11 @@
+<h1>Geolocation example</h1>
 <h1>Hello {{this.name}}</h1>
 <p>
-  Start editing to see some magic happen :) <br>
-  open this in full screen
 </p>
 <h1>
   your current location is: <br>
-  lat: {{this.lat}}<br>
-  lng: {{this.lng}}
+  lat: {{this.location}}<br>
+  test: {{0}}<br>
+  lng: {{this.location}}
+  <button (click)="obtainLocation()">Stuff</button>
 </h1>

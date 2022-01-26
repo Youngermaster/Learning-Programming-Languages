@@ -10,11 +10,16 @@ import { GeolocationService } from './services/geolocation.service';
 export class AppComponent {
   title = 'geolocation_example';
   name = 'Angular';
-  public location?: Promise<void | Geolocation>;
+  public location?: Geolocation;
 
-  constructor(private geolocationService: GeolocationService) {
-    this.location = new GeolocationService().getLocation();
+  constructor() {}
+
+  public ngOnInit(): void {
+    this.obtainLocation();
   }
 
-  public ngOnInit(): void {}
+  public obtainLocation() {
+    this.location = new GeolocationService().getLocation();
+    console.log('Obtaining...');
+  }
 }

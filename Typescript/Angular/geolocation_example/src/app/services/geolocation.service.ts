@@ -7,6 +7,8 @@ import { Geolocation } from '../models/geolocation.model';
 export class GeolocationService {
   constructor() {}
 
+  public stuffShit: Geolocation = new Geolocation();
+
   options: any = {
     enableHighAccuracy: true,
     timeout: 5000,
@@ -23,9 +25,12 @@ export class GeolocationService {
     console.log(`More or less ${crd.accuracy} meters.`);
     console.log('SAATTTTTTTTTTT');
     console.log(typeof crd.longitude);
-    thisGeolocation.latitude = crd.latitude;
-    thisGeolocation.longitude = crd.longitude;
+    thisGeolocation.setLatitude = crd.latitude;
+    thisGeolocation.setLongitude = crd.longitude;
     console.log('SAATTTTTTTTTTT 2');
+    this.stuffShit.setLatitude = crd.latitude;
+    this.stuffShit.setLongitude = crd.longitude;
+    console.log('SAATTTTTTTTTTT 3');
     return thisGeolocation;
   }
 
@@ -34,13 +39,14 @@ export class GeolocationService {
     return new Geolocation();
   }
 
-  public async getLocation() {
+  public getLocation() {
     if (navigator.geolocation) {
-      return await navigator.geolocation.getCurrentPosition(
+      navigator.geolocation.getCurrentPosition(
         this.success,
         this.error,
         this.options
       );
+      return this.stuffShit;
     } else {
       alert('Geolocation is not supported by this browser.');
       return new Geolocation();
