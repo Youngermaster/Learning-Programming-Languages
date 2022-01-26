@@ -1,17 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Geolocation } from '../models/geolocation.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class GeolocationService {
-  private latitude: number;
-  private longitude: number;
-
-  constructor() {
-    this.latitude = 0;
-    this.longitude = 0;
-    this.getLocation();
-  }
+  constructor() {}
 
   options: any = {
     enableHighAccuracy: true,
@@ -19,35 +13,37 @@ export class GeolocationService {
     maximumAge: 0,
   };
 
-  success(pos: any) {
-    var crd = pos.coords;
+  success(pos: any): Geolocation {
+    let crd = pos.coords;
+    let thisGeolocation: Geolocation = new Geolocation();
 
     console.log('Your current position is:');
     console.log(`Latitude : ${crd.latitude}`);
     console.log(`Longitude: ${crd.longitude}`);
     console.log(`More or less ${crd.accuracy} meters.`);
     console.log('SAATTTTTTTTTTT');
-    console.log(crd.longitude);
     console.log(typeof crd.longitude);
-    console.log(crd.latitude);
-    this.latitude = crd.latitude;
-    this.longitude = crd.longitude;
-    console.log('SAATTTTTTTTTTT');
+    thisGeolocation.latitude = crd.latitude;
+    thisGeolocation.longitude = crd.longitude;
+    console.log('SAATTTTTTTTTTT 2');
+    return thisGeolocation;
   }
 
   error(err: any) {
     console.warn(`ERROR(${err.code}): ${err.message}`);
+    return new Geolocation();
   }
 
-  async getLocation() {
+  public async getLocation() {
     if (navigator.geolocation) {
-      await navigator.geolocation.getCurrentPosition(
+      return await navigator.geolocation.getCurrentPosition(
         this.success,
         this.error,
         this.options
       );
     } else {
       alert('Geolocation is not supported by this browser.');
+      return new Geolocation();
     }
   }
 }

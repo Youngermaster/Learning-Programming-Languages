@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Geolocation } from './models/geolocation.model';
 import { GeolocationService } from './services/geolocation.service';
 
 @Component({
@@ -9,16 +10,11 @@ import { GeolocationService } from './services/geolocation.service';
 export class AppComponent {
   title = 'geolocation_example';
   name = 'Angular';
-  public lat: number;
-  public lng: number;
+  public location?: Promise<void | Geolocation>;
 
   constructor(private geolocationService: GeolocationService) {
-    this.lat = 0;
-    this.lng = 0;
-    this.getLocation();
+    this.location = new GeolocationService().getLocation();
   }
 
-  public ngOnInit(): void {
-    this.getLocation();
-  }
+  public ngOnInit(): void {}
 }
