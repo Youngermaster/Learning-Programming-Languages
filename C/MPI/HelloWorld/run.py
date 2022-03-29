@@ -7,7 +7,7 @@ import subprocess
 # by a tuple of the tutorial name and the default number of nodes
 programs = {
     # From the mpi-hello-world tutorial
-    'mpi_hello_world': ('mpi-hello-world', 4),
+    'mpi_hello_world': ('mpi-hello-world', 2),
 
     # From mpi-send-and-receive tutorial
     'send_recv': ('mpi-send-and-receive', 2),
