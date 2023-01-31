@@ -6,6 +6,7 @@ import (
 
 	"os"
 
+	swagger "github.com/arsmn/fiber-swagger/v2"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"go.mongodb.org/mongo-driver/bson"
@@ -29,6 +30,7 @@ func main() {
 	}
 
 	app := fiber.New()
+	app.Get("/swagger/*", swagger.HandlerDefault) // default
 	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(mongodb))
 
 	if err != nil {
