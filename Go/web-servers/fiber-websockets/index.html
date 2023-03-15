@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Socket.IO Test</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io.connect();
+
+        socket.on('list', items => {
+            const list = document.getElementById('list');
+            list.innerHTML = '';
+            items.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `${item} <button onclick="deleteItem(${index})">delete</button>`;
+                list.appendChild(li);
+            });
+        });
+
+        function addItem() {
+            const input = document.getElementById('input');
+            const item = input.value;
+            input.value = '';
+            socket.emit('add', item);
+        }
+
+        function deleteItem(index) {
+            socket.emit('delete', index);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Rifa</h1>
+    <ul id="list"></ul>
+    <input type="text" id="input">
+    <button onclick="addItem()">add</button>
+</body>
+
+</html>
