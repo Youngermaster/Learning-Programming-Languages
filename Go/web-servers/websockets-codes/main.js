@@ -1,15 +1,24 @@
-const WebSocket = require('ws');
+const socket = require('socket.io-client')('http://localhost:3000');
 
-const socket = new WebSocket('ws://localhost:6942/ws/123?v=1.0');
+socket.on('connect', () => {
+    console.log('Connected to server');
 
-socket.on('open', function () {
-    console.log('Connection established.');
+    socket.on('list', (todoList) => {
+        console.log('Todo list:', todoList);
+    });
+
+    socket.on('disconnect', () => {
+        console.log('Disconnected from server');
+    });
+
+    socket.emit('add', { name: 'Task 1', done: false });
+    socket.emit('add', { name: 'Task 2', done: true });
+
+    setTimeout(() => {
+        socket.emit('delete', 0);
+    }, 2000);
 });
 
-socket.on('message', function (data) {
-    console.log('Received message:', data);
-});
-
-socket.on('close', function () {
-    console.log('Connection closed.');
+socket.on('connect_error', (err) => {
+    console.log('Connection error:', err);
 });
