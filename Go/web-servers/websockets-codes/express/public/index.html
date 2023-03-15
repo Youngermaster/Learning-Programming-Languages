@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Happy Ticket | Rifas</title>
+</head>
+
+<body>
+    <h1>Happy Ticket | Rifas</h1>
+    <ul id="list"></ul>
+    <form id="add-form">
+        <input type="text" name="item" />
+        <button type="submit">Comprar</button>
+    </form>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
+    <script>
+        const socket = io();
+        const list = document.getElementById('list');
+        const addForm = document.getElementById('add-form');
+
+        socket.on('list', (items) => {
+            list.innerHTML = '';
+            for (const [index, item] of items.entries()) {
+                const li = document.createElement('li');
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.addEventListener('click', () => {
+                    socket.emit('delete', index);
+                });
+                li.textContent = item;
+                li.appendChild(deleteButton);
+                list.appendChild(li);
+            }
+        });
+
+        addForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const formData = new FormData(addForm);
+            const item = formData.get('item');
+            socket.emit('add', item);
+            addForm.reset();
+        });
+    </script>
+
+    <h3>Tickets disponibles</h3>
+    <ul id="real-list">
+        <li>AC01</li>
+        <li>AC02</li>
+        <li>AC03</li>
+        <li>AC04</li>
+        <li>AC05</li>
+    </ul>
+</body>
+
+</html>
