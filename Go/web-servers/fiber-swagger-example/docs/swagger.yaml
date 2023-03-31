@@ -1,0 +1,24 @@
+basePath: /
+host: localhost:3000
+info:
+  contact: {}
+  description: This is a sample Swagger API for Go Fiber.
+  title: Swagger Golang Chimbo
+  version: "1.0"
+paths:
+  /hello:
+    get:
+      consumes:
+      - application/json
+      description: Returns a friendly greeting
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Hello, world!
+          schema:
+            type: string
+      summary: Say hello
+      tags:
+      - Greetings
+swagger: "2.0"
