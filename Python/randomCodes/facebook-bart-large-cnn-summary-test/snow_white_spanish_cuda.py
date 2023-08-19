@@ -1,4 +1,5 @@
 from transformers import pipeline, BartTokenizer
+import torch
 
 text = """
 Había una vez, al final del invierno, una joven y bondadosa reina que, paseando por el jardín de su palacio, vio una rosa roja creciendo a pesar del frío, cuando la fue tocar se pinchó el dedo con una espina, y dejó caer tres gotas de sangre en la nieve. Fue entonces cuando la reina deseó tener una hija con la piel tan blanca como la nieve, los labios tan rojos como la sangre y el pelo negro tan negro como el ébano. Al poco tiempo, su deseo se cumplió, naciendo una encantadora princesa a quien la reina y su esposo, el rey, decidieron llamar Blancanieves. Sin embargo, la reina, madre de Blancanieves, enfermó poco después de dar a luz y esta fallece. El rey se casó posteriormente con una mujer muy bella pero fría y altiva. La nueva segunda esposa del rey, la nueva y segunda reina, la malvada madrastra de Blancanieves, realmente era una hechicera muy poderosa, y además de ser una mujer egoísta, malvada, mala y excesivamente vanidosa, era poseedora de un espejo encantado.
@@ -38,6 +39,9 @@ Sin saber que a quien el espejo se refería era de hecho Blancanieves, la cruel 
 Sin embargo, el príncipe y Blancanieves ven y reconocen a la reina malvada. Entonces, Blancanieves le cuenta al príncipe todos los malos momentos que su malvada madrastra le había hecho pasar, y cómo intentó matarla tres veces. Como castigo por sus malos actos, el príncipe, ahora rey, manda confeccionar un par de zapatos de hierro y ponerlos al rojo vivo, obligando a la reina malvada a ponérselos y a bailar sin parar hasta que muera, y todos fueron felices para siempre.
 """
 
+# * CUDA stuff
+print("Is CUDA Available? ", torch.cuda.is_available())
+device = 0  # This means we're using the first GPU (GPUs are 0-indexed)
 
 
 tokenizer = BartTokenizer.from_pretrained("facebook/bart-large-cnn")
@@ -64,7 +68,7 @@ def chunk_text(text, max_chunk_size):
     return chunks
 
 # Set up the summarization pipeline
-smr_bart = pipeline(task="summarization", model="facebook/bart-large-cnn")
+smr_bart = pipeline(task="summarization", model="facebook/bart-large-cnn", device=device)
 
 # Using the function
 max_chunk_size = 1000  # slightly less than 1024 for safety
