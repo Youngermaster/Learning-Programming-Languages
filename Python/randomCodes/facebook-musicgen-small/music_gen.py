@@ -6,7 +6,7 @@ processor = AutoProcessor.from_pretrained("facebook/musicgen-small")
 model = MusicgenForConditionalGeneration.from_pretrained("facebook/musicgen-small")
 
 inputs = processor(
-    text=["80s pop track with bassy drums and synth", "90s rock song with loud guitars and heavy drums"],
+    text=["80s pop track with bassy drums and synth", "90s rock song with loud guitars and heavy drums", "piano and electric guitar"],
     padding=True,
     return_tensors="pt",
 )
