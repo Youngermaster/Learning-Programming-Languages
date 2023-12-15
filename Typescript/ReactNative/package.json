@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "react-native-inappbrowser-reborn": "^3.7.0"
+  }
+}
