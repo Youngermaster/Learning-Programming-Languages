@@ -1,13 +1,7 @@
-% LaTeX Simple Invoice Template
-% By Amy Fare | amyfare.ca
-% Source: amyfare.ca/files/simple_invoice_template.tex
-% License: Creative Commons Attribution (CC BY 4.0)
-% Feel free to distribute, modify, and use as you wish, but please keep this line and the 4 lines above unchanged.
-
 \documentclass{letter}
 \usepackage[utf8]{inputenc}
 \usepackage[colorlinks]{hyperref}
-\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry} % Document margins
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{tabularx}
 \usepackage{multirow}
@@ -22,50 +16,73 @@
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 \begin{document}
-	
+
 \thispagestyle{empty}
 
-% Header, for company, invoice info
+% Encabezado, para la información de la empresa y de la cotización
 \begin{tabularx}{\textwidth}{l X l}
-   \hspace{-8pt} \multirow{5}{*}{\includegraphics[height=1.98cm]{logo.png}} & \textbf{Inter Astra Tutoring} & \hskip12pt\multirow{5}{*}{\begin{tabular}{r}\footnotesize\bf INVOICE \\[-0.8ex] \footnotesize TEST01 \\[-0.4ex] \footnotesize\bf DATE \\[-0.8ex] \footnotesize \MakeUppercase{\today} \\[-0.4ex] \footnotesize\bf DUE \\[-0.8ex] \footnotesize UPON RECEIPT OF SERVICES \end{tabular}}\hspace{-6pt} \\
-   & Amy Fare & \\
-   & amyfare.ca & \\
-   & +x-xxx-xxx-xxxx & \\
-   & me@example.com & \\
-\end{tabularx} 
-
-\vspace{1 cm}
-
-BILL TO
-
-% Recipient name
-\Large\textbf{Jane Doe}\normalsize
-
-% Table of fees
-\begin{tabularx}{\linewidth}{c X X X c}
-    \hline
-    & & & &\\[0.25ex]
-    \centering{\bf{Service}} & \centering{\bf{Rate}} & \centering{\bf{Quantity}} & \centering{\bf{Discount}} & \bf Payment due\\[2.5ex]\hline
-    & & & &\\
-    \centering Tutoring (1 hr) & \centering\$20.00 & \centering 1 & \centering -\$5.00 & \$15.00\\[2.5ex]\hline
-    & & & &\\
-    & & & \bf Total & \$15.00\\[2.5ex]\hhline{~~~--}
-    & & & & \\
-    & & & \bf Payment received & \$0.00\\[2.5ex]\hhline{~~~--}
-    & & & & \\
-    & & & \bf Balance due & \$15.00\\[2.5ex]\hhline{~~~==}
+  \hspace{-8pt} \multirow{5}{*} & \textbf{John Doe} & \hskip12pt\multirow{5}{*}{\begin{tabular}{r}\footnotesize\bf COTIZACIÓN \\[-0.8ex] \footnotesize 001 \\[-0.4ex] \footnotesize\bf FECHA \\[-0.8ex] \footnotesize \MakeUppercase{NOVIEMBRE 24, 2023} \\[-0.4ex] \footnotesize\bf VENCIMIENTO \\[-0.8ex] \footnotesize A CONVENIR \end{tabular}}\hspace{-6pt} \\
+                                & Medellín, Colombia               &                                                                                                                                                                                                                                                                                                            \\
+                                & john.doe@gmail.com               &                                                                                                                                                                                                                                                                                                            \\
+                                & 1234567890                       &                                                                                                                                                                                                                                                                                                            \\
 \end{tabularx}
 
 \vspace{1 cm}
 
-\Large\textbf{Payment instructions}\normalsize
+% Texto de introducción a los servicios
+\textbf{Consultoría en Arquitectura de Software y Chatbots con Langchain}\\
+Esta cotización presenta los servicios de consultoría especializada en arquitectura de software, enfocándose en soluciones de infraestructura digital, seguridad, y la integración de tecnologías avanzadas como Langchain para chatbots. Las tareas incluyen:
+
+\begin{enumerate}
+  \item Análisis detallado de las necesidades y requisitos de infraestructura del cliente.
+  \item Diseño e implementación de arquitecturas robustas utilizando Digital Ocean y MongoDB.
+  \item Estrategias y prácticas de seguridad para proteger datos y aplicaciones.
+  \item Desarrollo y optimización de procesos de DevOps, incluyendo mejoras con Docker.
+  \item Asesoría en la integración y configuración del chatbot Langchain con la infraestructura existente.
+  \item Capacitación y transferencia de conocimiento sobre mantenimiento y gestión del sistema.
+\end{enumerate}
+
+FACTURAR A
+
+% Nombre del destinatario
+\Large\textbf{Jane Doe}\normalsize
+
+% Tabla de tarifas
+\begin{tabularx}{\linewidth}{c X X X c}
+  \hline
+                                          &                                                                       &                                  &                 \\[0.25ex]
+  \centering{\bf{Servicio}}               & \centering{\bf{Descripción}}                                          & \centering{\bf{Horas estimadas}} & \bf Costo (COP) \\[0.5ex]\hline
+                                          &                                                                       &                                  &                 \\
+  \centering Análisis de Requerimientos   & \centering Evaluación de necesidades de infraestructura               & \centering  3                    & 150,000         \\[0.5ex]\hline
+                                          &                                                                       &                                  &                 \\
+  \centering Diseño e Implementación      & \centering Diseño de arquitectura con Digital Ocean y MongoDB         & \centering  10                   & 516,656         \\[0.5ex]\hline
+                                          &                                                                       &                                  &                 \\
+  \centering Seguridad y DevOps           & \centering Estrategias de seguridad y optimización de DevOps          & \centering  10                   & 500,000         \\[0.5ex]\hline
+                                          &                                                                       &                                  &                 \\
+  \centering Integración con Langchain    & \centering Configuración del chatbot Langchain con la infraestructura & \centering  15                   & 750,000         \\[0.5ex]\hline
+                                          &                                                                       &                                  &                 \\
+  \centering Capacitación y Transferencia & \centering Capacitación en gestión y mantenimiento del sistema        & \centering  2                    & 100,000         \\[0.5ex]\hline
+                                          &                                                                       &                                  &                 \\
+                                          & \centering{\bf Total}                                                 & \centering{\bf20}                & \bf2,016,656.00 \\[0.5ex]\hhline{~~~--}
+\end{tabularx}
+
+% 2,016,656
+\vspace{1 cm}
+
+\Large\textbf{Instrucciones de Pago}\normalsize
 
 \vspace{0.1 cm}
 
-\textbf{E-transfer}\\
-me@example.com
+\textbf{Transferencia Electrónica}\\
+Cuenta de ahorros Bancolombia 999999999
 
-\textbf{Paypal}\\
-\href{https://paypal.me/amycfare}{paypal.me/amycfare}
+\textbf{Firma}
 
+% Add your sign here
+% \includegraphics[width=0.2\textwidth]{young_sign.png}
+\includegraphics[width=0.2\textwidth]{logo.png}
+
+John Doe\\
+C.C.: 1098765432\\
+Cel.: 1234567890
 \end{document}
