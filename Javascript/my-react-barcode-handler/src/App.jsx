@@ -3,6 +3,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Barcode from "react-barcode";
 import JSBarcode from "react-jsbarcode";
+import BwipJsExample from "./BwipJsExample";
 
 export const BarcodeExample = ({ value }) => {
   return <Barcode value={value} format="upc" />;
@@ -24,6 +25,8 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <BwipJsExample text="788909011562|Used" />
+      <br />
       <BarcodeExample value="788909011562" />
       <br />
       <JSBarcodeExample value="788909011562" />
