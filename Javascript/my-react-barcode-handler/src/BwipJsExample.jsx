@@ -6,7 +6,7 @@ function BwipJsExample({ text }) {
 
   useEffect(() => {
     bwipjs.toCanvas(canvasRef.current, {
-      bcid: "upcacomposite", // Barcode type
+      bcid: "upca", // Barcode type
       text: text, // Text to encode
       scale: 3, // 3x scaling factor
       height: 15, // Bar height, in millimeters
