@@ -4,6 +4,7 @@ import "./App.css";
 import Barcode from "react-barcode";
 import JSBarcode from "react-jsbarcode";
 import BwipJsExample from "./BwipJsExample";
+import QuaggaReader from "./QuaggaReader";
 
 export const BarcodeExample = ({ value }) => {
   return <Barcode value={value} format="upc" />;
@@ -14,6 +15,10 @@ export const JSBarcodeExample = ({ value }) => {
 };
 
 function App() {
+  const handleDetected = (code) => {
+    console.log(`Detected barcode: ${code}`);
+  };
+
   return (
     <>
       <div>
@@ -32,6 +37,10 @@ function App() {
       <JSBarcodeExample value="788909011562" />
       <br />
       <JSBarcode value="1234567890" />
+
+      <div>
+        <QuaggaReader onDetected={handleDetected} />
+      </div>
     </>
   );
 }
