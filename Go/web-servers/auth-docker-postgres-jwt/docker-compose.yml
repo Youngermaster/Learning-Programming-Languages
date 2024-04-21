@@ -9,6 +9,7 @@ services:
     volumes:
       - .:/usr/src/some-api
     command: air cmd/main.go -b 0.0.0.0
+
   db:
     image: postgres:alpine
     environment:
@@ -19,6 +20,17 @@ services:
       - ${DB_PORT}:${DB_PORT}
     volumes:
       - postgres-db:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=user@domain.com
+      - PGADMIN_DEFAULT_PASSWORD=SecurePassword
+    ports:
+      - 5050:80
+    depends_on:
+      - db
+    restart: unless-stopped
 
 volumes:
   postgres-db:
