@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg width="205" height="215" viewBox="0 0 205 215" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="startarrow" markerWidth="10" markerHeight="7"
+refX="0" refY="3.5" orient="auto">
+<polygon points="10 0, 10 7, 0 3.5" />
+</marker>
+<marker id="endarrow" markerWidth="10" markerHeight="7"
+refX="10" refY="3.5" orient="auto">
+<polygon points="0 0, 10 3.5, 0 7" />
+</marker>
+
+</defs><style>
+.a15 { font-size: 15px; font-family: Times, serif; }
+</style>
+<rect x="0" y="50" width="200" height="100" fill="#add8e6ff" 
+            stroke-width="2" stroke="#000000ff" rx="0"  />
+<text dominant-baseline="middle" text-anchor="middle" 
+            x="100" y="85" class="a15"><tspan x = "100" dy="1.0em">Example Box</tspan></text></svg>
